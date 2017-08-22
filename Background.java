@@ -61,7 +61,7 @@ public class Background extends AsyncTask<String, Void, String> {
                 String post_data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&"
                         + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
 
-                ///Send username and password to the host server
+                //Send username and password to the host server
                 bufferedWriter.write(post_data);
 
 
