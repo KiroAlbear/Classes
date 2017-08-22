@@ -36,7 +36,7 @@ public class Background extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... voids) {
 
         String type = voids[0];
-
+        ///Location Of Login.php File On the Host Server
         String Login_url = "http://sea-green-residues.000webhostapp.com/Login.php";
 
         if (type.equals("Login")) {
@@ -48,20 +48,20 @@ public class Background extends AsyncTask<String, Void, String> {
 
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
+                 /// Set POST Method To Send data to Host Server
                 httpURLConnection.setRequestMethod("POST");
-
 
                 //httpURLConnection.setDoOutput(true);
                 //httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
-//                Log.e("outputStream",outputStream.toString());
+
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
 
 
                 String post_data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&"
                         + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
 
-
+                ///Send username and password to the host server
                 bufferedWriter.write(post_data);
 
 
