@@ -1,0 +1,14 @@
+
+
+ (anyviewYouWant).setOnClickListener(NameOfYourListner);
+
+
+
+   View.OnClickListener NameOfYourListner = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+        
+        //Do Something
+        
+        }
+    };
